@@ -27,6 +27,50 @@
    go mod tidy
    go run main.go
     ```
+## DATABASE DESIGN
+
+### 1. User Collection (`users`)
+
+The `users` collection stores information about the employees who will be assigned various assets.
+
+#### Fields:
+- `id` (Primary Key): Unique identifier for each user (ObjectId).
+- `email`: The user's email address (string).
+- `password`: The user's password (hashed).
+- `firstName`: The user's first name (string).
+- `lastName`: The user's last name (string).
+- `contact`: The user's contact number (string).
+- `gender`: The user's gender (string).
+- `bloodGroup`: The user's blood group (string).
+- `emergencyContact`: The user's emergency contact number (string).
+- `createdAt`: The date and time when the user was created (Date).
+- `updatedAt`: The date and time when the user information was last updated (Date).
+
+### 2. Assets Collection (`assets`)
+
+The `assets` collection stores information about various assets within the organization, such as laptops, furniture, and equipment.
+
+#### Fields:
+- `id` (Primary Key): Unique identifier for each asset (ObjectId).
+- `name`: The name of the asset (string).
+- `type`: The type of asset (e.g., "Laptop", "Monitor", etc.) (string).
+- `createdAt`: The date and time when the asset was created (Date).
+- `updatedAt`: The date and time when the asset information was last updated (Date).
+
+### 3. Mapping Collection (`assets`)
+The `mappings` collection holds the data that links a **user** to an **asset**. This is a crucial part of the system as it defines the many-to-many relationship between employees (users) and the assets they are assigned.
+
+### Fields:
+
+- `id` (Primary Key): A unique identifier for each mapping record (ObjectId).
+- `userId`: The ObjectId of the user (employee) to whom the asset is assigned (ObjectId, references `users._id`).
+- `assetId`: The ObjectId of the asset that is assigned to the user (ObjectId, references `assets._id`).
+- `createdAt`: The date and time when the mapping was created (Date).
+- `updatedAt`: The date and time when the mapping was last updated (Date).
+
+
+
+
 ## API DOCUMENTATION
 
 (all APIs, except the login API requires authentication)

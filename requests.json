@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "0b21fc8e-9c76-4816-9eab-eeb31fffbf5f",
+		"name": "asset-mapping",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11201011"
+	},
+	"item": [
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "create an employee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzIxOTkwNzAsImlhdCI6MTczMjExMjY3MCwidXNlcklkIjoiNjczZGYwZTQxYTRiNzQ2MTkwN2I4ZDQwIiwidXNlcm5hbWUiOiJqb2huZG9lQGV4YW1wbGUuY29tIn0.UCrB4kIqhH4DS_7bPUdzNYTpmL47xbregBOjiNPKTBM"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"admin@example.com\",\n  \"password\": \"Pass123\",\n  \"firstName\": \"Admin\",\n  \"lastName\": \"System\",\n  \"contact\": \"+1234567890\",\n  \"gender\": \"Male\",\n  \"bloodGroup\": \"O+\",\n  \"emergencyContact\": \"987654321\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/employee",
+						"description": "create new employee"
+					},
+					"response": []
+				},
+				{
+					"name": "get all employees",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzIxOTkwNzAsImlhdCI6MTczMjExMjY3MCwidXNlcklkIjoiNjczZGYwZTQxYTRiNzQ2MTkwN2I4ZDQwIiwidXNlcm5hbWUiOiJqb2huZG9lQGV4YW1wbGUuY29tIn0.UCrB4kIqhH4DS_7bPUdzNYTpmL47xbregBOjiNPKTBM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/employee",
+						"description": "get all users"
+					},
+					"response": []
+				},
+				{
+					"name": "get employee by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzIxOTkwNzAsImlhdCI6MTczMjExMjY3MCwidXNlcklkIjoiNjczZGYwZTQxYTRiNzQ2MTkwN2I4ZDQwIiwidXNlcm5hbWUiOiJqb2huZG9lQGV4YW1wbGUuY29tIn0.UCrB4kIqhH4DS_7bPUdzNYTpmL47xbregBOjiNPKTBM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/employee/673df0e41a4b7461907b8d40",
+						"description": "get employee by id"
+					},
+					"response": []
+				},
+				{
+					"name": "delete employee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/employee/673df0e41a4b7461907b8d40",
+						"description": "delete an employee record"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "assets",
+			"item": [
+				{
+					"name": "create asset",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzIxOTkwNzAsImlhdCI6MTczMjExMjY3MCwidXNlcklkIjoiNjczZGYwZTQxYTRiNzQ2MTkwN2I4ZDQwIiwidXNlcm5hbWUiOiJqb2huZG9lQGV4YW1wbGUuY29tIn0.UCrB4kIqhH4DS_7bPUdzNYTpmL47xbregBOjiNPKTBM"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Ergonomic Office Chair\",\n  \"type\": \"Furniture\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/asset"
+					},
+					"response": []
+				},
+				{
+					"name": "update asset",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzIxOTkwNzAsImlhdCI6MTczMjExMjY3MCwidXNlcklkIjoiNjczZGYwZTQxYTRiNzQ2MTkwN2I4ZDQwIiwidXNlcm5hbWUiOiJqb2huZG9lQGV4YW1wbGUuY29tIn0.UCrB4kIqhH4DS_7bPUdzNYTpmL47xbregBOjiNPKTBM"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"673df4475bfa7371bd052b88\",\n  \"name\": \"Ergonomic Office Chair\",\n  \"type\": \"Furniture\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/asset"
+					},
+					"response": []
+				},
+				{
+					"name": "get all assets",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzIxOTkwNzAsImlhdCI6MTczMjExMjY3MCwidXNlcklkIjoiNjczZGYwZTQxYTRiNzQ2MTkwN2I4ZDQwIiwidXNlcm5hbWUiOiJqb2huZG9lQGV4YW1wbGUuY29tIn0.UCrB4kIqhH4DS_7bPUdzNYTpmL47xbregBOjiNPKTBM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/asset"
+					},
+					"response": []
+				},
+				{
+					"name": "get asset by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzIxOTkwNzAsImlhdCI6MTczMjExMjY3MCwidXNlcklkIjoiNjczZGYwZTQxYTRiNzQ2MTkwN2I4ZDQwIiwidXNlcm5hbWUiOiJqb2huZG9lQGV4YW1wbGUuY29tIn0.UCrB4kIqhH4DS_7bPUdzNYTpmL47xbregBOjiNPKTBM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/asset/673df4255bfa7371bd052b87"
+					},
+					"response": []
+				},
+				{
+					"name": "delete an asset",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzIxOTkwNzAsImlhdCI6MTczMjExMjY3MCwidXNlcklkIjoiNjczZGYwZTQxYTRiNzQ2MTkwN2I4ZDQwIiwidXNlcm5hbWUiOiJqb2huZG9lQGV4YW1wbGUuY29tIn0.UCrB4kIqhH4DS_7bPUdzNYTpmL47xbregBOjiNPKTBM"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/asset/673df4255bfa7371bd052b87"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mapping",
+			"item": [
+				{
+					"name": "create a new mapping",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzIxOTkwNzAsImlhdCI6MTczMjExMjY3MCwidXNlcklkIjoiNjczZGYwZTQxYTRiNzQ2MTkwN2I4ZDQwIiwidXNlcm5hbWUiOiJqb2huZG9lQGV4YW1wbGUuY29tIn0.UCrB4kIqhH4DS_7bPUdzNYTpmL47xbregBOjiNPKTBM"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":\"673df0e41a4b7461907b8d40\",\n    \"assetId\":\"673df4255bfa7371bd052b87\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/mapping"
+					},
+					"response": []
+				},
+				{
+					"name": "get mappings by employee id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzIxOTkwNzAsImlhdCI6MTczMjExMjY3MCwidXNlcklkIjoiNjczZGYwZTQxYTRiNzQ2MTkwN2I4ZDQwIiwidXNlcm5hbWUiOiJqb2huZG9lQGV4YW1wbGUuY29tIn0.UCrB4kIqhH4DS_7bPUdzNYTpmL47xbregBOjiNPKTBM"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/mapping/employee/673df0e41a4b7461907b8d40"
+					},
+					"response": []
+				},
+				{
+					"name": "delete asset mapping",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzIxOTkwNzAsImlhdCI6MTczMjExMjY3MCwidXNlcklkIjoiNjczZGYwZTQxYTRiNzQ2MTkwN2I4ZDQwIiwidXNlcm5hbWUiOiJqb2huZG9lQGV4YW1wbGUuY29tIn0.UCrB4kIqhH4DS_7bPUdzNYTpmL47xbregBOjiNPKTBM"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/mapping/673df7b7572997ef69a157cb"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "localhost:8080/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@example.com\",\n  \"password\": \"Pass123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/login",
+				"description": "login to the system"
+			},
+			"response": []
+		},
+		{
+			"name": "dashboard api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzIxOTkwNzAsImlhdCI6MTczMjExMjY3MCwidXNlcklkIjoiNjczZGYwZTQxYTRiNzQ2MTkwN2I4ZDQwIiwidXNlcm5hbWUiOiJqb2huZG9lQGV4YW1wbGUuY29tIn0.UCrB4kIqhH4DS_7bPUdzNYTpmL47xbregBOjiNPKTBM"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/dashboard"
+			},
+			"response": []
+		}
+	]
+}
